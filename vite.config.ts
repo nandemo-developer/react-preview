@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? 'react-artwork' : './',
+  base: process.env.GITHUB_PAGES ? 'react-preview' : './',
   plugins: [
     react({
       babel: {
