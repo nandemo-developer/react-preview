@@ -154,7 +154,11 @@ function NewTodo({onRegister}:{onRegister:() => void}){
           />
       </CardContent>
         <CardFooter className="flex-row-reverse">
-          <Button onClick={ () =>  register()} className="bg-blue-500 w-[120px]">登録</Button>
+          <Button 
+            disabled={ newTodo.name == "" || newTodo.category == "" || newTodo.description == "" || newTodo.endDate == ""} 
+            onClick={ () =>  register()} 
+            className="bg-blue-500 w-[120px]"
+          >登録</Button>
         </CardFooter>
     </Card>
   )
