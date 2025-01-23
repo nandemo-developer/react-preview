@@ -21,11 +21,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-
     /*Alias*/
     "paths": {
       "@/*": ["./src/*"]
-    },
+    }
   },
   "include": ["src"]
 }
