@@ -1,17 +1,18 @@
 import { ReactNode } from "react";
-import { useAtom } from "jotai";
+import { atom, useAtom } from "jotai";
 
 import { DevTools } from "jotai-devtools";
 import "jotai-devtools/styles.css";
 
 import "./App.css";
-import { pageAtom } from "./modules/atom";
 
-import Layout from "@/components/Layout";
-import Clock from "@/components/Clock";
-import Calculator from "@/components/Calculator";
-import Todo from "@/components/Todo";
-import Calendar from "@/components/Calendar";
+import Layout from "@/Layout";
+import Clock from "@/pages/Clock";
+import Calculator from "@/pages/Calculator";
+import Todo from "@/pages/Todo";
+import Calendar from "@/pages/Calendar";
+
+export const pageAtom = atom<0|1|2|3>(0)
 
 function App() {
   const [page] = useAtom(pageAtom);
