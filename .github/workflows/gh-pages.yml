@@ -28,6 +28,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10
+        run_install: false
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -37,8 +42,8 @@ jobs:
       run: npm cache clean --force
     - name: build
       run: |
-        npm ci
-        npm run build
+        pnpm i
+        pnpm build
       env:
         GITHUB_PAGES: true
     - name: List build file
